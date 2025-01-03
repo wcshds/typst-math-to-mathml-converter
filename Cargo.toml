@@ -1,0 +1,17 @@
+[package]
+name = "convert-typst-math-to-mathml"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+typst = { git = "https://github.com/typst/typst", default-features = false }
+typst-eval = { git = "https://github.com/typst/typst", default-features = false }
+unicode-math-class = "0.1.0"
+
+[profile.release]
+strip = true
+lto = "thin"
+codegen-units = 1
+
+[profile.dev]
+opt-level = 3
