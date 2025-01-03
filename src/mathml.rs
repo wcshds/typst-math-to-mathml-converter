@@ -20,7 +20,7 @@ use crate::{
 
 pub fn convert_to_mathml(content: &str, add_annotation: bool) -> String {
     let (equation, styles) = eval(&content).unwrap();
-    println!("{:#?}", equation);
+    // println!("{:#?}", equation);
     let styles = styles.unwrap_or(Styles::new());
     let style_chain = StyleChain::new(&styles);
 
